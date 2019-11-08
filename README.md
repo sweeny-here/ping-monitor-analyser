@@ -60,3 +60,11 @@ Number of log entries per hour
 ### Latency
 
 If ping time is greater than 29 ms, then report latency
+
+## Manual Search
+
+To search the logs and highlight timestamps for packet loss
+
+```
+grep -r down ~/logs/ping-monitor.log |grep -P '[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]):(2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]' --colour
+```
